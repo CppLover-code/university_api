@@ -1,2 +1,19 @@
 Установка зависимостей - pip install django djangorestframework python-dotenv
 
+Почему Custom User — правильный подход
+
+Многие новички делают ошибку:
+
+❌ используют стандартный User
+❌ потом пытаются добавить role
+
+И начинается боль с миграциями.
+
+Лучше сделать правильно сразу
+
+✅ custom user
+✅ расширяемая архитектура
+✅ готово для JWT
+✅ готово для permissions
+✅ production-style structure
+
