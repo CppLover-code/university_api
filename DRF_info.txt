@@ -17,3 +17,10 @@
 ✅ готово для permissions
 ✅ production-style structure
 
+
+Serializers
+
+Serializer переводит: Python object <-> JSON
+
+Зачем это нужно?
+Frontend не понимает Django объекты. Frontend понимает: JSON
