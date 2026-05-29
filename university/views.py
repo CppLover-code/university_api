@@ -8,16 +8,16 @@ from .serializer import TeacherSerializer, StudentSerializer, SubjectSerializer
 # serializer_class - Как превращать данные в JSON.
 class TeacherViewSet(viewsets.ModelViewSet):
 
-    queryset = Teacher.object.all()
+    queryset = Teacher.objects.all()
     serializer_class = TeacherSerializer
 
 class StudentViewSet(viewsets.ModelViewSet):
 
-    queryset = Student.object.all()
+    queryset = Student.objects.all()
     serializer_class = StudentSerializer
 
-class subjectViewSet(viewsets.ReadOnlyModelViewSet):
+class SubjectViewSet(viewsets.ReadOnlyModelViewSet):
 
-    queryset = Subject.object.all()
+    queryset = Subject.objects.all()
     serializer_class = SubjectSerializer
 

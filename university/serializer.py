@@ -21,6 +21,6 @@ class StudentSerializer(serializers.ModelSerializer):
 
 class TeacherSerializer(serializers.ModelSerializer):
 
-    class Mets:
-        model = Student
+    class Meta:
+        model = Teacher
         fields = "__all__"
