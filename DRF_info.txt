@@ -83,3 +83,42 @@ Admin - Может всё.
 BasePermission - Базовый класс для своих permissions.
 
 SAFE_METHODS это: Method, GET, HEAD, OPTIONS, то есть методы без изменения данных.
+
+**************************************************************
+JSON Web Token
+Что он делает
+Позволяет:
+
+✅ логиниться через API
+✅ получать token
+✅ отправлять token с запросами
+✅ защищать endpoints
+
+**************************************************************
+Сейчас - SessionAuthentication через admin login.
+
+А будет: Bearer Token Authentication.
+
+Как работает JWT
+1. Login
+Пользователь отправляет:
+{
+    "username": "teacher1",
+    "password": "12345678Aa"
+}
+
+2. Backend выдает token
+{
+    "access": "eyJhbGc...",
+    "refresh": "eyJhbGc..."
+}
+3. Frontend отправляет token в headers:
+
+Authorization: Bearer TOKEN
+Backend понимает:
+
+✅ кто пользователь
+✅ какая роль
+✅ авторизован ли он
+
+*******************************************************************
