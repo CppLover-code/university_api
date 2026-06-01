@@ -80,3 +80,6 @@ Admin - Может всё.
 Как это реализуется в DRF
 Через: permissions
 
+BasePermission - Базовый класс для своих permissions.
+
+SAFE_METHODS это: Method, GET, HEAD, OPTIONS, то есть методы без изменения данных.

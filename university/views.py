@@ -3,6 +3,8 @@ from rest_framework import viewsets
 from .models import Teacher, Student, Subject
 from .serializer import TeacherSerializer, StudentSerializer, SubjectSerializer
 
+from .permissions import IsTeacherOrReadOnly
+
 # viewsets.ModelViewSet - Это готовый CRUD.
 # queryset - Какие данные брать из базы.
 # serializer_class - Как превращать данные в JSON.
@@ -20,4 +22,6 @@ class SubjectViewSet(viewsets.ReadOnlyModelViewSet):
 
     queryset = Subject.objects.all()
     serializer_class = SubjectSerializer
+
+    # permission_classes = [IsTeacherOrReadOnly]
 
