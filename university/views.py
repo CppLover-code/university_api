@@ -5,6 +5,8 @@ from .serializer import TeacherSerializer, StudentSerializer, SubjectSerializer
 
 from .permissions import IsTeacherOrReadOnly
 
+from rest_framework.permissions import IsAuthenticated
+
 # viewsets.ModelViewSet - Это готовый CRUD.
 # queryset - Какие данные брать из базы.
 # serializer_class - Как превращать данные в JSON.

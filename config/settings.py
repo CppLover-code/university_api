@@ -133,7 +133,7 @@ REST_FRAMEWORK = {
 
     # Тип авторизации - Json web token - JWT
     "DEFAULT_AUTHENTICATION_CLASSES": [
-        "rest_framework_simplejwt.authentification.JWTAuthentification",
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
     ],
 }
 
