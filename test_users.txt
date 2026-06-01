@@ -1,6 +1,6 @@
-ROLE            LOGIN       PASSWORD
+ROLE            LOGIN       PASSWORD        TOKEN
 
-admin           admin       admin123
+admin           admin       admin123        eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzgwMzAwODE2LCJpYXQiOjE3ODAzMDA1MTYsImp0aSI6ImYxM2IxMDA4NTkzZjQ4YTk4ZjY2NDBhYmI1YWZiOTU2IiwidXNlcl9pZCI6IjEifQ.33ftdy05WHM831G4iz5uS_JisqVANuj04IF1Ygn2J4I
 teacher         teacher2    12345678Aa
 student         student2    12345678Aa
 

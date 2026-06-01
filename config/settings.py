@@ -45,6 +45,8 @@ INSTALLED_APPS = [
 
     "users",
     "university",
+
+    "drf_spectacular",
 ]
 
 MIDDLEWARE = [
@@ -140,6 +142,8 @@ REST_FRAMEWORK = {
         # - Json web token - JWT
         "rest_framework_simplejwt.authentication.JWTAuthentication",
     ],
+
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
 }
 
 AUTH_USER_MODEL = "users.User"
