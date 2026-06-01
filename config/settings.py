@@ -131,8 +131,13 @@ REST_FRAMEWORK = {
         "rest_framework.permissions.AllowAny",
     ],
 
-    # Тип авторизации - Json web token - JWT
+    # Тип авторизации 
     "DEFAULT_AUTHENTICATION_CLASSES": [
+
+        # - session auth
+        "rest_framework.authentication.SessionAuthentication",
+
+        # - Json web token - JWT
         "rest_framework_simplejwt.authentication.JWTAuthentication",
     ],
 }

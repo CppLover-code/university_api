@@ -1,0 +1,6 @@
+ROLE            LOGIN       PASSWORD
+
+admin           admin       admin123
+teacher         teacher2    12345678Aa
+student         student2    12345678Aa
+
