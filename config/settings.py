@@ -151,6 +151,16 @@ REST_FRAMEWORK = {
 
     # API будет отдавать 2 объекта на страницу
     "PAGE_SIZE": 2,
+
+    # Throttling - ограничение количества запросов
+    "DEFAULT_THROTTLE_CLASSES": [
+        "rest_framework.throttling.UserRateThrottle",
+    ],
+
+    # каждый пользователь модет сделать 5 запросов в минуту
+    "DEFAULT_THROTTLE_RATES": {
+        "user": "5/minute",
+    }
 }
 
 AUTH_USER_MODEL = "users.User"
