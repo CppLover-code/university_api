@@ -12,6 +12,9 @@ from users.permissions import (
     IsTeacherOrAdmin
 )
 
+from django.utils.decorators import method_decorator
+from django.views.decorators.cache import cache_page
+
 # viewsets.ModelViewSet - Это готовый CRUD.
 # queryset - Какие данные брать из базы.
 # serializer_class - Как превращать данные в JSON.
@@ -29,6 +32,9 @@ class StudentViewSet(viewsets.ModelViewSet):
 
     permission_classes = [IsAdmin]
 
+# cache_page(60) - кэшировать response 60 секунд
+# первый запрос идет в БД, следующие берутся из cache
+@method_decorator(cache_page(60), name="list")
 class SubjectViewSet(viewsets.ReadOnlyModelViewSet):
 
     queryset = Subject.objects.all()

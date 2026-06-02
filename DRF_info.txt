@@ -214,3 +214,16 @@ Per-site cache	    весь сайт
 Per-view cache	    конкретный endpoint
 Low-level cache	    ручной cache
 
+ИТОГ:
+Cache это: идея / механизм
+Redis это: инструмент / технология для реализации cache.
+
+Cache	    ->  концепция
+Redis	    ->  технология
+LocMemCache	->  технология
+Memcached	->  технология
+
+LocMemCache - очень простой cache, прямо внутри Django процесса,
+То есть сейчас Django сам хранит cache в памяти. Но это НЕ Redis.
+
+Redis — отдельный сервер. ВСЕ используют: один общий cache.
