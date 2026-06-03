@@ -177,13 +177,7 @@ REST_FRAMEWORK = {
 AUTH_USER_MODEL = "users.User"
 
 CACHES = {
-    """
-    # было кеширование LocMemCache
-    "default": {
-            "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
-            "LOCATION": "unique",
-        }
-    """
+    
     "default": {
 
         "BACKEND":
@@ -201,3 +195,10 @@ CACHES = {
 }
 
 # redis://redis:6379/1 - //имя Docker сервиса:порт Redis/номер Redis database
+# было кеширование LocMemCache
+"""
+    "default": {
+            "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
+            "LOCATION": "unique",
+        }
+"""

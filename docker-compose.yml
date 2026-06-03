@@ -16,7 +16,7 @@ services:
 
     depends_on:
       - db
-
+      - redis
   db:
     image: postgres:17
 
