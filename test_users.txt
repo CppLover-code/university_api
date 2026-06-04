@@ -1,6 +1,6 @@
 ROLE            LOGIN       PASSWORD        TOKEN
 
-admin           admin       admin123        eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzgwNDc0ODkxLCJpYXQiOjE3ODA0NzQ1OTEsImp0aSI6ImZiYWZiYjIzYmY5MjQ1MmRhMzU5ZWIzZmFhOWM5MGYzIiwidXNlcl9pZCI6IjEifQ.JxdaIqZG1ottbpc4FeEIJj1xBwf85QaDk5r1NYR9BbU
+admin           admin       admin123        eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzgxMTYzODkxLCJpYXQiOjE3ODA1NTkwOTEsImp0aSI6IjgxNmRhMDk2ZjI0NzQ4NWU4ZmRiY2Y0MGFiZmE3NjI2IiwidXNlcl9pZCI6IjEifQ.0kF9aFywJDoqrWxb2OXobPgQKkET3NIXEac3t3GMxMQ
 teacher         teacher2    12345678Aa
-student         student2    12345678Aa
+student         student1    12345678Aa
 
