@@ -50,10 +50,12 @@ class StudentViewSet(viewsets.ModelViewSet):
         "user__username",
     ]
 
+    filterset_fields = ["subjects"]
+
 # cache_page(60) - кэшировать response 60 секунд
 # первый запрос идет в БД, следующие берутся из cache
 @method_decorator(cache_page(60), name="list")
-class SubjectViewSet(viewsets.ReadOnlyModelViewSet):
+class SubjectViewSet(viewsets.ModelViewSet):
 
     queryset = Subject.objects.all()
     serializer_class = SubjectSerializer
