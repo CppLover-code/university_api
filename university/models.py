@@ -45,5 +45,3 @@ class Student(models.Model):
         return self.user.username
     
 
-
-    # РАЗОБРАТЬ КОД!!!!!!!!!!!!!!!

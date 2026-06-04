@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "university",
 
     "drf_spectacular",
+    "django_filters",
 ]
 
 MIDDLEWARE = [
@@ -171,7 +172,13 @@ REST_FRAMEWORK = {
     # каждый пользователь модет сделать 5 запросов в минуту
     "DEFAULT_THROTTLE_RATES": {
         "user": "5/minute",
-    }
+    },
+
+    "DEFAULT_FILTER_BACKENDS": [
+        "django_filters.rest_framework.DjangoFilterBackend",
+        "rest_framework.filters.SearchFilter",
+        "rest_framework.filters.OrderingFilter",
+    ],
 }
 
 AUTH_USER_MODEL = "users.User"
