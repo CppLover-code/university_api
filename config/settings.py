@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     "rest_framework",
 
     "users",
-    "university",
+    "university.apps.UniversityConfig",
 
     "drf_spectacular",
     "django_filters",

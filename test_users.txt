@@ -4,3 +4,21 @@ admin           admin       admin123        eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
 teacher         teacher2    12345678Aa
 student         student1    12345678Aa
 
+
+
+****************************************************
+>>> for u in User.objects.all():
+...     print(u.id, u.username, u.role)
+... 
+1 admin admin
+2 student1 student
+3 student2 student
+4 student3 student
+5 teacher1 teacher
+6 teacher2 teacher
+7 student4 student
+>>> 
+
+http://127.0.0.1:8001/swagger/
+
+docker compose exec web python manage.py shell
