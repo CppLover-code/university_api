@@ -328,7 +328,13 @@ Redis выступает брокером сообщений.
 Django отправляет задачу в Redis,
 а Celery Worker забирает и выполняет её.
 
+Через Cеlery обычно делают:
 
+- Email - send_email.delay()
+- Генерация PDF - generate_report.delay()
+- Импорт Excel - import_students.delay()
+- Очистка данных - clear_old_logs.delay()
+- Ночные задачи: Очистить кеш/Сделать резервную копию/Сформировать отчёт
 
 
 
