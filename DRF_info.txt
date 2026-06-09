@@ -304,8 +304,16 @@ SearchFilter
 OrderingFilter
 DjangoFilterBackend
 
+******************************************************************
+Celery - Redis
 
-
+Browser
+   ↓
+Django API
+   ↓
+Redis
+   ↓
+Celery Worker
 
 
 
