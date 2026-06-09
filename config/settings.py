@@ -219,3 +219,11 @@ SIMPLE_JWT = {
     "REFRESH_TOKEN_LIFETIME": timedelta(days=30),
 
 }
+
+# настройка Redis для Celery
+# redis — имя сервиса в docker-compose/6379 — порт Redis/0 — база Redis №0
+CELERY_BROKER_URL = "redis://redis:6379/0"
+CELERY_RESULT_BACKEND = "redis://redis:6379/0"
+
+
+
