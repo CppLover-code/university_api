@@ -8,6 +8,7 @@ from .permissions import IsTeacherOrReadOnly
 from rest_framework.permissions import IsAuthenticated
 
 from rest_framework.permissions import AllowAny
+from users.permissions import IsAdmin
 from rest_framework.response import Response
 from rest_framework import status
 
@@ -94,6 +95,7 @@ class StudentRegistrationViewSet(
 
         return Response(
             {
+                "message": "Student successfully registered",
                 "id": student.id,
                 "username":
                     student.user.username,
@@ -112,7 +114,7 @@ class TeacherRegistrationViewSet(
         TeacherRegistrationSerializer
     )
 
-    permission_classes = []
+    permission_classes = [IsAdmin]
 
     def create(self, request):
 
