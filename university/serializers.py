@@ -110,17 +110,6 @@ class TeacherRegistrationSerializer(
                 }
             )
 
-        if User.objects.filter(
-            email=attrs["email"]
-        ).exists():
-
-            raise serializers.ValidationError(
-                {
-                    "email":
-                    "Пользователь с такой почтой уже существует."
-                }
-            )
-
         return attrs
 
     def create(self, validated_data):
@@ -139,3 +128,16 @@ class TeacherRegistrationSerializer(
         )
 
         return teacher
+    
+    """
+    if User.objects.filter(
+            email=attrs["email"]
+        ).exists():
+
+            raise serializers.ValidationError(
+                {
+                    "email":
+                    "Пользователь с такой почтой уже существует."
+                }
+            )
+    """
