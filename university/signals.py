@@ -9,5 +9,6 @@ def student_created(sender, instance, created, **kwargs):
     if created:
 
         send_welcome_email.delay(
-            instance.user.username
+            instance.user.email,
+            instance.user.username,
         )
