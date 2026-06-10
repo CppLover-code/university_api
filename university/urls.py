@@ -5,6 +5,7 @@ from .views import (
     SubjectViewSet,
     StudentViewSet,
     StudentRegistrationViewSet,
+    TeacherRegistrationViewSet,
 )
 
 router = DefaultRouter()
@@ -17,6 +18,12 @@ router.register(
     r"register-student",
     StudentRegistrationViewSet,
     basename="register-student"
+)
+
+router.register(
+    r"register-teacher",
+    TeacherRegistrationViewSet,
+    basename="register-teacher"
 )
 
 urlpatterns = router.urls

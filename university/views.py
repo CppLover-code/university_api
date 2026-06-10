@@ -12,6 +12,7 @@ from rest_framework.response import Response
 from rest_framework import status
 
 from .serializers import StudentRegistrationSerializer
+from .serializers import TeacherRegistrationSerializer
 
 from users.permissions import (
     IsAdmin,
@@ -98,6 +99,40 @@ class StudentRegistrationViewSet(
                     student.user.username,
                 "email":
                     student.user.email,
+            },
+            status=status.HTTP_201_CREATED
+        )
+    
+# для создания Teacher через swagger
+class TeacherRegistrationViewSet(
+    viewsets.GenericViewSet
+):
+
+    serializer_class = (
+        TeacherRegistrationSerializer
+    )
+
+    permission_classes = []
+
+    def create(self, request):
+
+        serializer = self.get_serializer(
+            data=request.data
+        )
+
+        serializer.is_valid(
+            raise_exception=True
+        )
+
+        teacher = serializer.save()
+
+        return Response(
+            {
+                "id": teacher.id,
+                "username":
+                    teacher.user.username,
+                "email":
+                    teacher.user.email,
             },
             status=status.HTTP_201_CREATED
         )
